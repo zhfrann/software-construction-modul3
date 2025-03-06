@@ -23,7 +23,7 @@ namespace modul3_103022330008
 
         private void num1_Click(object sender, EventArgs e)
         {
-            numbers.Add(1);
+            //numbers.Add(1);
             if (lblOutput.Text.Length == 0)
             {
                 lblOutput.Text = "1";
@@ -46,7 +46,7 @@ namespace modul3_103022330008
 
         private void button2_Click(object sender, EventArgs e)
         {
-            numbers.Add(2);
+            //numbers.Add(2);
             if (lblOutput.Text.Length == 0)
             {
                 lblOutput.Text = "2";
@@ -59,7 +59,7 @@ namespace modul3_103022330008
 
         private void button3_Click(object sender, EventArgs e)
         {
-            numbers.Add(3);
+            //numbers.Add(3);
             if (lblOutput.Text.Length == 0)
             {
                 lblOutput.Text = "3";
@@ -72,7 +72,7 @@ namespace modul3_103022330008
 
         private void button4_Click(object sender, EventArgs e)
         {
-            numbers.Add(4);
+            //numbers.Add(4);
             if (lblOutput.Text.Length == 0)
             {
                 lblOutput.Text = "4";
@@ -85,7 +85,7 @@ namespace modul3_103022330008
 
         private void button5_Click(object sender, EventArgs e)
         {
-            numbers.Add(5);
+            //numbers.Add(5);
             if (lblOutput.Text.Length == 0)
             {
                 lblOutput.Text = "5";
@@ -98,7 +98,7 @@ namespace modul3_103022330008
 
         private void button6_Click(object sender, EventArgs e)
         {
-            numbers.Add(6);
+            //numbers.Add(6);
             if (lblOutput.Text.Length == 0)
             {
                 lblOutput.Text = "6";
@@ -111,7 +111,7 @@ namespace modul3_103022330008
 
         private void button7_Click(object sender, EventArgs e)
         {
-            numbers.Add(7);
+            //numbers.Add(7);
             if (lblOutput.Text.Length == 0)
             {
                 lblOutput.Text = "7";
@@ -124,7 +124,7 @@ namespace modul3_103022330008
 
         private void button8_Click(object sender, EventArgs e)
         {
-            numbers.Add(8);
+            //numbers.Add(8);
             if (lblOutput.Text.Length == 0)
             {
                 lblOutput.Text = "8";
@@ -137,7 +137,7 @@ namespace modul3_103022330008
 
         private void button9_Click(object sender, EventArgs e)
         {
-            numbers.Add(9);
+            //numbers.Add(9);
             if (lblOutput.Text.Length == 0)
             {
                 lblOutput.Text = "9";
@@ -152,18 +152,33 @@ namespace modul3_103022330008
         {
             if (lblOutput.Text.Length > 0)
             {
-                lblOutput.Text += "+";
+                int num = Int32.Parse(lblOutput.Text);
+                numbers.Add(num);
+                lblOutput.Text = "";
             }
         }
 
         private void buttonResult_Click(object sender, EventArgs e)
         {
+            numbers.Add(lblOutput.Text);
             int result = 0;
             foreach (var item in numbers)
             {
                 result += Convert.ToInt32(item);
             }
             lblOutput.Text = "Hasil : " + result.ToString();
+        }
+
+        private void button0_Click(object sender, EventArgs e)
+        {
+            if (lblOutput.Text.Length == 0)
+            {
+                lblOutput.Text = "0";
+            }
+            else
+            {
+                lblOutput.Text += "0";
+            }
         }
     }
 }
