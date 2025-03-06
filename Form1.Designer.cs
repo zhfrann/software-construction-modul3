@@ -46,10 +46,10 @@
             // 
             // lblOutput
             // 
-            this.lblOutput.AutoSize = true;
-            this.lblOutput.Location = new System.Drawing.Point(189, 39);
+            this.lblOutput.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lblOutput.Location = new System.Drawing.Point(55, 43);
             this.lblOutput.Name = "lblOutput";
-            this.lblOutput.Size = new System.Drawing.Size(39, 13);
+            this.lblOutput.Size = new System.Drawing.Size(267, 25);
             this.lblOutput.TabIndex = 0;
             this.lblOutput.Text = "Hasil : ";
             // 
@@ -154,14 +154,14 @@
             this.flowLayoutPanel1.Controls.Add(this.button7);
             this.flowLayoutPanel1.Controls.Add(this.button8);
             this.flowLayoutPanel1.Controls.Add(this.button9);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(42, 97);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(55, 88);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(167, 89);
             this.flowLayoutPanel1.TabIndex = 10;
             // 
             // buttonPlus
             // 
-            this.buttonPlus.Location = new System.Drawing.Point(288, 100);
+            this.buttonPlus.Location = new System.Drawing.Point(273, 91);
             this.buttonPlus.Name = "buttonPlus";
             this.buttonPlus.Size = new System.Drawing.Size(49, 23);
             this.buttonPlus.TabIndex = 10;
@@ -171,12 +171,13 @@
             // 
             // buttonResult
             // 
-            this.buttonResult.Location = new System.Drawing.Point(288, 129);
+            this.buttonResult.Location = new System.Drawing.Point(273, 120);
             this.buttonResult.Name = "buttonResult";
             this.buttonResult.Size = new System.Drawing.Size(49, 23);
             this.buttonResult.TabIndex = 11;
             this.buttonResult.Text = "=";
             this.buttonResult.UseVisualStyleBackColor = true;
+            this.buttonResult.Click += new System.EventHandler(this.buttonResult_Click);
             // 
             // Form1
             // 
@@ -191,7 +192,6 @@
             this.Text = "Form1";
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
